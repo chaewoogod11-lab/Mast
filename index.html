@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAST - Empowering Strategic Thinkers of Tomorrow</title>
+  <meta name="description" content="MAST believes that everyone should be provided the opportunity to grow through high-quality education and experience."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top Nav -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <img src="assets/MAST_slogan_White.png" alt="MAST logo" class="brand__logo" />
+        <span class="brand__name">MAST</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact" class="btn btn--small">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1>
+            <span class="h1__brand">MAST</span>
+            <span class="h1__sub">Empowering Strategic Thinkers of Tomorrow</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            A student-led community cultivating strategic thinkers at Indiana University.
+          </p>
+
+          <div class="hero__actions" aria-label="Quick links">
+            <a class="hero__link" href="#team">Explore Team</a>
+            <span class="hero__divider" aria-hidden="true">/</span>
+            <a class="hero__link" href="#resources">View Resources</a>
+          </div>
+        </div>
+
+        <div class="hero__glow" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-split__media">
+            <img src="assets/mast_group.jpg" alt="MAST team group photo" class="about-split__img">
+          </div>
+
+          <div class="about-split__content">
+            <p class="about-split__eyebrow">WHO WE ARE</p>
+            <h2 class="about-split__title">About MAST</h2>
+
+            <p class="about-split__text">
+              MAST is an academic community where forward-thinking students gather to challenge perspectives
+              and broaden their intellectual horizons. We believe that by sharing diverse insights, we can
+              cultivate the multifaceted vision required for tomorrow's strategic challenges.
+            </p>
+
+            <a class="about-link" href="./about.html">About Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments -->
+    <section class="section dept-section" id="departments">
+      <div class="container" id="team">
+        <h2 class="dept-section__title">Our Departments</h2>
+
+        <div class="dept-grid">
+          <article class="dept-card">
+            <h3 class="dept-card__title">Marketing</h3>
+            <ul class="dept-card__bullets">
+              <li>Design brand assets and establish identity.</li>
+              <li>Develop campaigns and workshop communications.</li>
+              <li>Deliver briefs, social content, and materials.</li>
+            </ul>
+            <a class="dept-card__link" href="#">Learn more</a>
+          </article>
+
+          <article class="dept-card">
+            <h3 class="dept-card__title">Operations</h3>
+            <ul class="dept-card__bullets">
+              <li>Run sessions with consistent standards.</li>
+              <li>Manage onboarding and internal systems.</li>
+              <li>Coordinate logistics and execution.</li>
+            </ul>
+            <a class="dept-card__link" href="#">Learn more</a>
+          </article>
+
+          <article class="dept-card">
+            <h3 class="dept-card__title">Partnerships</h3>
+            <ul class="dept-card__bullets">
+              <li>Outreach for speakers and collaborations.</li>
+              <li>Manage relationships and follow-ups.</li>
+              <li>Coordinate recruiting and events support.</li>
+            </ul>
+            <a class="dept-card__link" href="#">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact-simple" id="resources">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-sub">
+          For partnerships, speaking invitations, or general inquiries.
+        </p>
+
+        <form action="https://formspree.io/f/mwvngzkj" method="POST" class="contact-form">
+          <input
+            type="text"
+            name="subject"
+            placeholder="Title"
+            required
+          >
+
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="5"
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <img src="assets/MAST_slogan_White.png" alt="MAST logo" class="footer__logo" />
+        </div>
+
+        <div class="footer__right">
+          <span>&copy; <span id="year"></span> MAST - Indiana University</span>
+          <span class="footer__dot" aria-hidden="true">|</span>
+          <span class="footer__handle">@mast_at_iu</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
