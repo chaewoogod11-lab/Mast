@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -29,9 +29,9 @@
         </button>
 
         <ul class="nav__menu" id="navMenu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#resources">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="teams.html">Team</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="#contact" class="btn btn--small">Contact</a></li>
         </ul>
       </nav>
@@ -53,7 +53,7 @@
           </p>
 
           <div class="hero__actions" aria-label="Quick links">
-            <a class="hero__link" href="#team">Explore Team</a>
+            <a class="hero__link" href="teams.html">Explore Team</a>
             <span class="hero__divider" aria-hidden="true">/</span>
             <a class="hero__link" href="#resources">View Resources</a>
           </div>
@@ -68,7 +68,7 @@
       <div class="container">
         <div class="about-split">
           <div class="about-split__media">
-            <img src="assets/mast_group.jpg" alt="MAST team group photo" class="about-split__img">
+            <img src="assets/grouppic.JPG" alt="MAST team group photo" class="about-split__img">
           </div>
 
           <div class="about-split__content">
@@ -87,70 +87,74 @@
       </div>
     </section>
 
-    <!-- Departments -->
-    <section class="section dept-section" id="departments">
+        <!-- Alumni -->
+    <section class="section alumni-section" id="departments">
       <div class="container" id="team">
-        <h2 class="dept-section__title">Our Departments</h2>
+        <h2 class="alumni-section__title">Where we going</h2>
 
-        <div class="dept-grid">
-          <article class="dept-card">
-            <h3 class="dept-card__title">Marketing</h3>
-            <ul class="dept-card__bullets">
-              <li>Design brand assets and establish identity.</li>
-              <li>Develop campaigns and workshop communications.</li>
-              <li>Deliver briefs, social content, and materials.</li>
-            </ul>
-            <a class="dept-card__link" href="#">Learn more</a>
-          </article>
-
-          <article class="dept-card">
-            <h3 class="dept-card__title">Operations</h3>
-            <ul class="dept-card__bullets">
-              <li>Run sessions with consistent standards.</li>
-              <li>Manage onboarding and internal systems.</li>
-              <li>Coordinate logistics and execution.</li>
-            </ul>
-            <a class="dept-card__link" href="#">Learn more</a>
-          </article>
-
-          <article class="dept-card">
-            <h3 class="dept-card__title">Partnerships</h3>
-            <ul class="dept-card__bullets">
-              <li>Outreach for speakers and collaborations.</li>
-              <li>Manage relationships and follow-ups.</li>
-              <li>Coordinate recruiting and events support.</li>
-            </ul>
-            <a class="dept-card__link" href="#">Learn more</a>
-          </article>
+        <!-- Replace each placeholder src with a company logo file in assets/ -->
+        <div class="alumni-logos" aria-label="Alumni company logos">
+          <div class="alumni-logo">
+            <img src="assets/deloitte.png" alt="Deloitte">
+          </div>
+          <div class="alumni-logo">
+            <img src="assets/ey.png" alt="EY">
+          </div>
+          <div class="alumni-logo">
+            <img src="assets/kpmg.png" alt="KPMG">
+          </div>
+          <div class="alumni-logo">
+            <img src="assets/PwC-logo.png" alt="PwC">
+          </div>
+          <div class="alumni-logo">
+            <img src="assets/THG_0.png" alt="THG">
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section class="section" id="contact">
-      <div class="container contact-simple" id="resources">
-        <h2 class="contact-title">Contact</h2>
-        <p class="contact-sub">
-          For partnerships, speaking invitations, or general inquiries.
-        </p>
-
-        <form action="https://formspree.io/f/mwvngzkj" method="POST" class="contact-form">
-          <input
-            type="text"
-            name="subject"
-            placeholder="Title"
-            required
-          >
-
-          <textarea
-            name="message"
-            placeholder="Message"
-            rows="5"
-            required
-          ></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
+      <div class="container contact-pro" id="resources">
+        <div class="contact-pro__left">
+          <p class="contact-pro__eyebrow">GET IN TOUCH</p>
+          <h2 class="contact-pro__title">Contact Us</h2>
+          <div class="contact-pro__rule"></div>
+          <p class="contact-pro__desc">
+            For partnerships, speaking invitations, or general inquiries, we'd love to hear from you.
+          </p>
+          <div class="contact-pro__items">
+            <div class="contact-pro__item">
+              <span class="contact-pro__item-label">Email</span>
+              <span class="contact-pro__item-value">mast@indiana.edu</span>
+            </div>
+            <div class="contact-pro__item">
+              <span class="contact-pro__item-label">Instagram</span>
+              <span class="contact-pro__item-value">@mast_at_iu</span>
+            </div>
+            <div class="contact-pro__item">
+              <span class="contact-pro__item-label">Location</span>
+              <span class="contact-pro__item-value">Indiana University, Bloomington</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-pro__right">
+          <form action="https://formspree.io/f/mwvngzkj" method="POST" class="contact-form">
+            <div class="contact-form__field">
+              <label class="contact-form__label">Email</label>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label">Title</label>
+              <input type="text" name="subject" placeholder="e.g. Partnership Inquiry" required>
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label">Message</label>
+              <textarea name="message" placeholder="Tell us more..." rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -172,3 +176,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+

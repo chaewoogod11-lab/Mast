@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"c:/Users/win-pc/Documents/Playground/MAST/styles.css\":*)"
+    ]
+  }
+}
