@@ -225,3 +225,18 @@
 .team-card__photo:has(img)::after {
   display: none;
 }
+
+.team-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1100px) {
+  .team-grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .team-grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Photo crop fix - show top of image (faces) */
+.team-card__photo img {
+  object-position: center top;
+}

@@ -400,3 +400,7 @@
   border-radius: 50%;
   background: #c09a5a;
 }
+
+.about-greeting__img {
+  object-position: 20% center;
+}
