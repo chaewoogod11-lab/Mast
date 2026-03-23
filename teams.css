@@ -7,13 +7,14 @@
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(18,18,24,.08);
   position: sticky;
-  top: 64px;
+  top: 70px;
   z-index: 90;
 }
 .team-subnav__inner {
   display: flex;
   overflow-x: auto;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 .team-subnav__inner::-webkit-scrollbar { display: none; }
 .team-subnav__link {
@@ -173,7 +174,6 @@
 .team-card:hover .team-card__photo img {
   transform: scale(1.05);
 }
-/* Gradient overlay on photo bottom */
 .team-card__photo::after {
   content: "";
   position: absolute;
@@ -186,8 +186,6 @@
 .team-card:hover .team-card__photo::after {
   opacity: 1;
 }
-
-/* Placeholder silhouette (no photo) */
 .team-card__photo:not(:has(img))::before {
   content: "";
   position: absolute;
@@ -238,36 +236,165 @@
   transform: scale(1.15);
 }
 
-/* Responsive */
-@media (max-width: 1100px) {
-  .team-grid,
-  .team-grid--exec {
+/* =====================
+   RESPONSIVE — TABLET
+   ===================== */
+@media (max-width: 980px) {
+  .team-subnav {
+    top: 70px;
+  }
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .team-grid--3 {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-@media (max-width: 720px) {
-  .team-grid,
-  .team-grid--exec {
+  .team-grid--4 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
   }
   .team-section {
-    padding: 72px 0;
+    padding: 80px 0;
   }
-}
-@media (max-width: 420px) {
-  .team-grid,
-  .team-grid--exec {
-    grid-template-columns: 1fr;
+  .team-section__header {
+    margin-bottom: 44px;
   }
 }
 
-.team-grid--4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-@media (max-width: 1100px) {
-  .team-grid--4 { grid-template-columns: repeat(2, 1fr); }
-}
+/* =====================
+   RESPONSIVE — MOBILE
+   ===================== */
 @media (max-width: 720px) {
-  .team-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .team-subnav {
+    top: 70px;
+  }
+  .team-subnav__link {
+    padding: 13px 18px;
+    font-size: 11px;
+    letter-spacing: .10em;
+  }
+
+  .team-banner {
+    min-height: 220px;
+  }
+  .team-banner__inner {
+    padding: 52px 0 44px;
+  }
+  .team-banner__breadcrumb {
+    margin: 0 0 10px;
+  }
+  .team-banner__sub {
+    font-size: 13px;
+  }
+
+  .team-section {
+    padding: 60px 0;
+  }
+  .team-section__header {
+    margin-bottom: 36px;
+  }
+  .team-section__desc {
+    font-size: 14px;
+  }
+
+  .team-grid,
+  .team-grid--3,
+  .team-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .team-card__info {
+    padding: 14px 16px 16px;
+    padding-right: 44px;
+  }
+  .team-card__name {
+    font-size: 13.5px;
+  }
+  .team-card__role {
+    font-size: 10px;
+    letter-spacing: .10em;
+  }
+  .team-card__linkedin {
+    bottom: 12px;
+    right: 12px;
+  }
+  .team-card__linkedin svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* =====================
+   RESPONSIVE — SMALL MOBILE
+   ===================== */
+@media (max-width: 480px) {
+  .team-subnav {
+    top: 66px;
+  }
+  .team-subnav__link {
+    padding: 12px 14px;
+    font-size: 10.5px;
+  }
+
+  .team-banner {
+    min-height: 190px;
+  }
+  .team-banner__inner {
+    padding: 42px 0 36px;
+  }
+
+  .team-section {
+    padding: 48px 0;
+  }
+  .team-section__header {
+    margin-bottom: 28px;
+  }
+
+  .team-grid,
+  .team-grid--3,
+  .team-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Shorter photo on small screens */
+  .team-card__photo {
+    aspect-ratio: 4/5;
+  }
+
+  .team-card__info {
+    padding: 12px 14px 14px;
+    padding-right: 40px;
+  }
+  .team-card__name {
+    font-size: 13px;
+    margin: 0 0 3px;
+  }
+  .team-card__role {
+    font-size: 9.5px;
+  }
+  .team-card__linkedin {
+    bottom: 10px;
+    right: 10px;
+  }
+  .team-card__linkedin svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* =====================
+   RESPONSIVE — XS
+   ===================== */
+@media (max-width: 360px) {
+  .team-grid,
+  .team-grid--3,
+  .team-grid--4 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .team-card__photo {
+    aspect-ratio: 3/2;
+  }
 }
