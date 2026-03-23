@@ -210,6 +210,33 @@ ${message}
   });
 }
 
+function setupTeamSubnav() {
+  const links = document.querySelectorAll(".team-subnav__link");
+  if (!links.length) return;
+
+  const sectionIds = Array.from(links).map((a) => a.getAttribute("href").replace("#", ""));
+  const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+  const subnavHeight = document.querySelector(".team-subnav")?.offsetHeight || 0;
+  const topbarHeight = document.querySelector(".topbar")?.offsetHeight || 0;
+  const offset = topbarHeight + subnavHeight + 16;
+
+  const activate = () => {
+    let current = sectionIds[0];
+    sections.forEach((sec) => {
+      if (window.scrollY + offset >= sec.offsetTop) {
+        current = sec.id;
+      }
+    });
+    links.forEach((a) => {
+      a.classList.toggle("team-subnav__link--active", a.getAttribute("href") === `#${current}`);
+    });
+  };
+
+  activate();
+  window.addEventListener("scroll", activate, { passive: true });
+}
+
 const year = document.getElementById("year");
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -223,3 +250,4 @@ setupNav();
 setupTopbarScroll();
 setupReveal();
 setupContactForm();
+setupTeamSubnav();
