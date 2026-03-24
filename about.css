@@ -2,10 +2,12 @@
 
 /* Sub Navigation */
 .about-subnav {
-  background: #fff;
-  border-bottom: 1px solid rgba(18,18,24,.10);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(18,18,24,.08);
   position: sticky;
-  top: 64px;
+  top: 70px;
   z-index: 90;
 }
 .about-subnav__inner {
@@ -13,16 +15,17 @@
   gap: 0;
   overflow-x: auto;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 .about-subnav__inner::-webkit-scrollbar { display: none; }
 .about-subnav__link {
   display: inline-block;
-  padding: 14px 24px;
-  font-size: 13px;
+  padding: 15px 26px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: rgba(18,18,24,.50);
+  color: rgba(18,18,24,.42);
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color .2s, border-color .2s;
@@ -125,38 +128,49 @@
   color: rgba(255,255,255,.55);
 }
 .about-greeting__eyebrow {
-  font-size: 11px;
-  letter-spacing: .16em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: #c09a5a;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+}
+.about-greeting__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #c09a5a;
 }
 .about-greeting__title {
   font-family: var(--serif, 'Source Serif 4', serif);
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: clamp(28px, 3vw, 44px);
   font-weight: 600;
   color: #121218;
-  margin: 0 0 24px;
-  letter-spacing: -0.4px;
+  margin: 0 0 20px;
+  letter-spacing: -0.5px;
 }
 .about-greeting__divider {
-  width: 48px;
+  width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #500808, rgba(192,154,90,.6));
-  margin-bottom: 28px;
+  background: linear-gradient(90deg, #500808, rgba(192,154,90,.5));
+  margin-bottom: 32px;
 }
 .about-greeting__text {
   font-size: 15.5px;
-  line-height: 1.85;
-  color: rgba(18,18,24,.70);
-  margin: 0 0 18px;
+  line-height: 1.88;
+  color: rgba(18,18,24,.68);
+  margin: 0 0 20px;
 }
 .about-greeting__signature {
   font-family: var(--serif, 'Source Serif 4', serif);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #500808;
-  margin-top: 12px;
+  margin-top: 16px;
+  letter-spacing: .01em;
 }
 
 /* Mission */
@@ -223,11 +237,21 @@
   align-items: flex-start;
 }
 .about-values__eyebrow {
-  font-size: 11px;
-  letter-spacing: .16em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: #c09a5a;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+}
+.about-values__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #c09a5a;
 }
 .about-values__title {
   font-family: var(--serif, 'Source Serif 4', serif);
@@ -251,8 +275,8 @@
 .about-values__item {
   display: flex;
   gap: 24px;
-  padding: 24px 0;
-  border-bottom: 1px solid rgba(18,18,24,.08);
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(18,18,24,.07);
   align-items: flex-start;
 }
 .about-values__item:first-child {
@@ -284,11 +308,21 @@
   margin-bottom: 56px;
 }
 .about-history__eyebrow {
-  font-size: 11px;
-  letter-spacing: .16em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: #c09a5a;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+}
+.about-history__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #c09a5a;
 }
 .about-history__title {
   font-family: var(--serif, 'Source Serif 4', serif);
@@ -403,4 +437,136 @@
 
 .about-greeting__img {
   object-position: 20% center;
+}
+
+/* ===== Mobile Polish — 720px ===== */
+@media (max-width: 720px) {
+  .about-banner {
+    min-height: 200px;
+  }
+  .about-banner__inner {
+    padding: 46px 0 38px;
+  }
+  .about-banner__title {
+    font-size: clamp(28px, 7.5vw, 42px);
+  }
+  .about-section {
+    padding: 58px 0;
+  }
+  .about-greeting {
+    gap: 32px;
+  }
+  .about-greeting__media {
+    max-width: 360px;
+  }
+  .about-mission__header {
+    margin-bottom: 32px;
+  }
+  .about-mission__card {
+    padding: 28px 24px;
+  }
+  .about-values {
+    gap: 36px;
+  }
+  .about-values__item {
+    padding: 22px 0;
+    gap: 18px;
+  }
+  .about-history__header {
+    margin-bottom: 40px;
+  }
+  .about-history__timeline {
+    padding-left: 28px;
+    margin-left: 14px;
+  }
+  .about-history__item {
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    padding: 0 0 32px;
+  }
+  .about-history__item::before {
+    left: -42px;
+  }
+}
+
+/* ===== Mobile Polish — 480px ===== */
+@media (max-width: 480px) {
+  .about-banner {
+    min-height: 175px;
+  }
+  .about-banner__inner {
+    padding: 36px 0 28px;
+  }
+  .about-banner__sub {
+    font-size: 13px;
+  }
+  .about-section {
+    padding: 44px 0;
+  }
+  .about-greeting {
+    gap: 24px;
+  }
+  .about-greeting__media {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .about-greeting__title {
+    font-size: clamp(22px, 7vw, 32px);
+  }
+  .about-greeting__text {
+    font-size: 14.8px;
+    line-height: 1.8;
+    margin: 0 0 16px;
+  }
+  .about-greeting__signature {
+    font-size: 14px;
+  }
+  .about-mission__grid {
+    gap: 12px;
+  }
+  .about-mission__card {
+    padding: 22px 18px;
+  }
+  .about-mission__card-title {
+    font-size: 18px;
+  }
+  .about-mission__card-text {
+    font-size: 14px;
+  }
+  .about-values__item {
+    gap: 14px;
+    padding: 18px 0;
+  }
+  .about-values__item-title {
+    font-size: 14.5px;
+  }
+  .about-values__item-text {
+    font-size: 13.5px;
+    line-height: 1.68;
+  }
+  .about-history__header {
+    margin-bottom: 32px;
+  }
+  .about-history__timeline {
+    padding-left: 22px;
+    margin-left: 10px;
+  }
+  .about-history__item {
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    padding: 0 0 24px;
+  }
+  .about-history__item::before {
+    left: -34px;
+    width: 12px;
+    height: 12px;
+    top: 3px;
+  }
+  .about-history__event {
+    font-size: 15px;
+  }
+  .about-history__detail {
+    font-size: 13.5px;
+    line-height: 1.68;
+  }
 }
