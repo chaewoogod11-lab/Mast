@@ -386,24 +386,53 @@
 
 /* Responsive */
 @media (max-width: 980px) {
-  .about-greeting {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  /* Subnav: compact on tablet */
+  .about-subnav {
+    top: 70px;
   }
-  .about-greeting__media {
-    position: static;
-    max-width: 380px;
+  .about-subnav__link {
+    padding: 13px 20px;
+    font-size: 11.5px;
+    letter-spacing: .10em;
   }
-  .about-mission__grid {
-    grid-template-columns: 1fr;
+
+  /* Banner: less towering on tablet */
+  .about-banner {
+    min-height: 240px;
   }
-  .about-values {
-    grid-template-columns: 1fr;
-    gap: 48px;
+  .about-banner__inner {
+    padding: 52px 0 44px;
   }
+
+  /* Section rhythm */
   .about-section {
     padding: 72px 0;
   }
+
+  /* Greeting: single column, image centered */
+  .about-greeting {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .about-greeting__media {
+    position: static;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  /* Mission: single column with gap */
+  .about-mission__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Values: single column */
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  /* History */
   .about-history__item {
     grid-template-columns: 60px 1fr;
     gap: 20px;
@@ -441,132 +470,235 @@
 
 /* ===== Mobile Polish — 720px ===== */
 @media (max-width: 720px) {
+  /* Subnav */
+  .about-subnav__link {
+    padding: 12px 16px;
+    font-size: 11px;
+    letter-spacing: .09em;
+  }
+
+  /* Banner */
   .about-banner {
     min-height: 200px;
   }
   .about-banner__inner {
-    padding: 46px 0 38px;
+    padding: 44px 0 36px;
   }
   .about-banner__title {
-    font-size: clamp(28px, 7.5vw, 42px);
-  }
-  .about-section {
-    padding: 58px 0;
-  }
-  .about-greeting {
-    gap: 32px;
-  }
-  .about-greeting__media {
-    max-width: 360px;
-  }
-  .about-mission__header {
-    margin-bottom: 32px;
-  }
-  .about-mission__card {
-    padding: 28px 24px;
-  }
-  .about-values {
-    gap: 36px;
-  }
-  .about-values__item {
-    padding: 22px 0;
-    gap: 18px;
-  }
-  .about-history__header {
-    margin-bottom: 40px;
-  }
-  .about-history__timeline {
-    padding-left: 28px;
-    margin-left: 14px;
-  }
-  .about-history__item {
-    grid-template-columns: 52px 1fr;
-    gap: 16px;
-    padding: 0 0 32px;
-  }
-  .about-history__item::before {
-    left: -42px;
-  }
-}
-
-/* ===== Mobile Polish — 480px ===== */
-@media (max-width: 480px) {
-  .about-banner {
-    min-height: 175px;
-  }
-  .about-banner__inner {
-    padding: 36px 0 28px;
+    font-size: clamp(26px, 7vw, 38px);
   }
   .about-banner__sub {
-    font-size: 13px;
+    font-size: 13.5px;
   }
+
+  /* Section rhythm */
   .about-section {
-    padding: 44px 0;
+    padding: 56px 0;
   }
+
+  /* Greeting */
   .about-greeting {
-    gap: 24px;
+    gap: 28px;
   }
   .about-greeting__media {
-    max-width: 260px;
-    margin: 0 auto;
+    max-width: 300px;
   }
   .about-greeting__title {
-    font-size: clamp(22px, 7vw, 32px);
+    font-size: clamp(24px, 6.5vw, 36px);
   }
   .about-greeting__text {
-    font-size: 14.8px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.82;
     margin: 0 0 16px;
   }
-  .about-greeting__signature {
-    font-size: 14px;
+
+  /* Mission: left-align header on mobile */
+  .about-mission__header {
+    text-align: left;
+    margin-bottom: 28px;
+  }
+  .about-mission__rule {
+    margin: 0;
   }
   .about-mission__grid {
-    gap: 12px;
+    gap: 14px;
   }
   .about-mission__card {
-    padding: 22px 18px;
+    padding: 26px 22px;
   }
-  .about-mission__card-title {
-    font-size: 18px;
+
+  /* Values */
+  .about-values {
+    gap: 32px;
   }
-  .about-mission__card-text {
-    font-size: 14px;
+  .about-values__desc {
+    font-size: 14.5px;
+    line-height: 1.72;
   }
   .about-values__item {
-    gap: 14px;
-    padding: 18px 0;
+    padding: 20px 0;
+    gap: 18px;
   }
-  .about-values__item-title {
-    font-size: 14.5px;
-  }
-  .about-values__item-text {
-    font-size: 13.5px;
-    line-height: 1.68;
-  }
+
+  /* History */
   .about-history__header {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   .about-history__timeline {
-    padding-left: 22px;
-    margin-left: 10px;
+    padding-left: 26px;
+    margin-left: 12px;
   }
   .about-history__item {
-    grid-template-columns: 44px 1fr;
-    gap: 12px;
-    padding: 0 0 24px;
+    grid-template-columns: 50px 1fr;
+    gap: 14px;
+    padding: 0 0 28px;
   }
   .about-history__item::before {
-    left: -34px;
-    width: 12px;
-    height: 12px;
-    top: 3px;
+    left: -39px;
   }
   .about-history__event {
     font-size: 15px;
   }
   .about-history__detail {
     font-size: 13.5px;
-    line-height: 1.68;
+    line-height: 1.7;
+  }
+}
+
+/* ===== Mobile Polish — 480px ===== */
+@media (max-width: 480px) {
+  /* Subnav: very compact */
+  .about-subnav__link {
+    padding: 11px 13px;
+    font-size: 10.5px;
+    letter-spacing: .08em;
+  }
+
+  /* Banner */
+  .about-banner {
+    min-height: 170px;
+  }
+  .about-banner__inner {
+    padding: 34px 0 26px;
+  }
+  .about-banner__breadcrumb {
+    margin: 0 0 10px;
+  }
+  .about-banner__sub {
+    font-size: 12.5px;
+  }
+
+  /* Section rhythm */
+  .about-section {
+    padding: 42px 0;
+  }
+
+  /* Greeting */
+  .about-greeting {
+    gap: 22px;
+  }
+  .about-greeting__media {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .about-greeting__title {
+    font-size: clamp(22px, 6.5vw, 30px);
+  }
+  .about-greeting__divider {
+    margin-bottom: 24px;
+  }
+  .about-greeting__text {
+    font-size: 14.5px;
+    line-height: 1.78;
+    margin: 0 0 14px;
+  }
+  .about-greeting__signature {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  /* Mission */
+  .about-mission__header {
+    margin-bottom: 22px;
+  }
+  .about-mission__grid {
+    gap: 10px;
+  }
+  .about-mission__card {
+    padding: 20px 16px;
+  }
+  .about-mission__icon {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .about-mission__card-title {
+    font-size: 17px;
+    margin: 0 0 10px;
+  }
+  .about-mission__card-text {
+    font-size: 13.5px;
+    line-height: 1.72;
+  }
+
+  /* Values */
+  .about-values {
+    gap: 28px;
+  }
+  .about-values__title {
+    font-size: clamp(22px, 6.5vw, 30px);
+    margin: 0 0 14px;
+  }
+  .about-values__desc {
+    font-size: 14px;
+  }
+  .about-values__item {
+    gap: 12px;
+    padding: 16px 0;
+  }
+  .about-values__item-title {
+    font-size: 14px;
+    margin: 0 0 4px;
+  }
+  .about-values__item-text {
+    font-size: 13px;
+    line-height: 1.66;
+  }
+
+  /* History */
+  .about-history__header {
+    margin-bottom: 28px;
+  }
+  .about-history__title {
+    font-size: clamp(22px, 6.5vw, 30px);
+    margin: 0 0 14px;
+  }
+  .about-history__timeline {
+    padding-left: 20px;
+    margin-left: 8px;
+  }
+  .about-history__item {
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    padding: 0 0 22px;
+  }
+  .about-history__item:last-child {
+    padding-bottom: 0;
+  }
+  .about-history__item::before {
+    left: -32px;
+    width: 11px;
+    height: 11px;
+    top: 3px;
+  }
+  .about-history__year {
+    font-size: 12px;
+  }
+  .about-history__event {
+    font-size: 14.5px;
+    margin: 0 0 6px;
+  }
+  .about-history__detail {
+    font-size: 13px;
+    line-height: 1.66;
   }
 }
