@@ -1,0 +1,14 @@
+{
+  "name": "mast-public-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "npm run build && node --test tests/public-build.test.mjs && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "linkedom": "0.18.13"
+  }
+}

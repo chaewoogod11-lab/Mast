@@ -1,4 +1,4 @@
-﻿:root{
+:root{
   /* Palette: cream base + deep crimson accents */
   --paper: #fbf7f3;
   --paper-2: #f3ece6;
@@ -3632,4 +3632,55 @@ body{
   .contact-form textarea {
     font-size: 16px; /* prevents iOS zoom on focus */
   }
+}
+
+/* Shared sticky navigation: one measured offset for every page. */
+.about-split__note { color: #61564c; font-size: 14px; line-height: 1.75; border-left: 2px solid #b48b4d; padding-left: 18px; margin: 24px 0 22px; }
+:root { --topbar-height: 81px; --subnav-height: 0px; }
+html, body { height: auto; min-height: 100%; }
+body { min-height: 100vh; }
+html { scroll-padding-top: calc(var(--topbar-height) + var(--subnav-height) + 16px); }
+nav.site-subnav {
+  position: sticky;
+  top: var(--topbar-height);
+  z-index: 90;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #e4dcd2;
+  backdrop-filter: blur(12px);
+}
+nav.site-subnav > .container { display: flex; flex-wrap: wrap; overflow: visible; gap: 0; }
+nav.site-subnav a {
+  padding: 15px 22px;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #655b55;
+  border-bottom: 2px solid transparent;
+}
+nav.site-subnav a:hover,
+nav.site-subnav a[aria-current="location"] { color: #500808; border-bottom-color: #500808; }
+.nav__menu a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+.nav__toggle { flex-direction: column; gap: 4px; }
+.nav__toggle-bar { flex: 0 0 2px; margin: 0; }
+:focus-visible { outline: 2px solid #b48b4d; outline-offset: 4px; }
+/* The footer belongs in document flow, so it never covers content. */
+.footer { position: static; }
+main { padding-bottom: 0; }
+@media (max-width: 980px) {
+  .nav__menu { top: 100%; max-height: calc(100dvh - var(--topbar-height)); overflow-y: auto; }
+  .nav__menu a { display: block; }
+  #departments .alumni-logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; gap: 20px; }
+  #departments .alumni-logo { min-width: 0; min-height: 90px; padding: 12px; }
+  #departments .alumni-logo:last-child { grid-column: 1 / -1; width: 50%; justify-self: center; }
+  #departments .alumni-logos .alumni-logo:nth-child(n) img { width: 100%; max-width: 180px; max-height: 88px; object-fit: contain; }
+}
+@media (max-width: 480px) {
+  nav.site-subnav a { padding: 12px 10px; font-size: 10px; letter-spacing: .05em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
 }

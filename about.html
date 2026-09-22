@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="about.css"/>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Top Nav -->
   <header class="topbar">
@@ -21,13 +22,13 @@
         <span class="brand__name">MAST</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation">
           <span class="nav__toggle-bar"></span>
           <span class="nav__toggle-bar"></span>
           <span class="nav__toggle-bar"></span>
         </button>
         <ul class="nav__menu" id="navMenu">
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="teams.html">Team</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="index.html#contact" class="btn btn--small">Contact</a></li>
@@ -37,7 +38,7 @@
   </header>
 
   <!-- Sub Navigation -->
-  <nav class="about-subnav">
+  <nav class="about-subnav site-subnav" aria-label="About sections">
     <div class="container about-subnav__inner">
       <a href="#greeting" class="about-subnav__link about-subnav__link--active">Greeting</a>
       <a href="#mission" class="about-subnav__link">Mission</a>
@@ -46,7 +47,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
 
     <!-- Page Banner -->
     <section class="about-banner">
@@ -114,9 +115,9 @@
           </div>
           <div class="about-mission__card">
             <span class="about-mission__icon">◈</span>
-            <h3 class="about-mission__card-title">Network</h3>
+            <h3 class="about-mission__card-title">How We Work</h3>
             <p class="about-mission__card-text">
-              To build a sustainable cycle of exchange between students and Korean professionals worldwide — where every connection made today becomes a resource for the next generation.
+              We apply strategic thinking to real problems through case-based sessions, collaborative projects, and industry partnerships. Members bring perspectives from different disciplines to study questions, develop ideas, and learn together.
             </p>
           </div>
         </div>
@@ -133,6 +134,7 @@
           <p class="about-values__desc">
             These principles guide every decision we make, every event we run, and every member we welcome — rooted in the belief that discomfort, curiosity, and connection are what drive lasting growth.
           </p>
+          <p class="about-values__desc about-values__curriculum">For 2026&ndash;27, new leadership is translating these same values into a more advanced, rigorous, and application-driven curriculum through case-based learning, collaborative projects, and industry collaboration.</p>
         </div>
         <div class="about-values__right">
           <div class="about-values__item">
@@ -181,20 +183,25 @@
             <div class="about-history__content">
               <h4 class="about-history__event">MAST Founded</h4>
               <p class="about-history__detail">MAST was established at Indiana University with a founding cohort of strategic thinkers committed to bridging business theory and practice.</p>
+              <div class="about-history__entry">
+                <h4 class="about-history__event">Alumni Career Workshop</h4>
+                <p class="about-history__detail">Invited MAST alumni working at top consulting and business firms to share firsthand career insights with current members through an interactive employment workshop.</p>
+              </div>
             </div>
           </div>
-          <div class="about-history__item">
-            <span class="about-history__year">2024</span>
-            <div class="about-history__content">
-              <h4 class="about-history__event">Alumni Career Workshop</h4>
-              <p class="about-history__detail">Invited MAST alumni working at top consulting and business firms to share firsthand career insights with current members through an interactive employment workshop.</p>
-            </div>
-          </div>
+
           <div class="about-history__item">
             <span class="about-history__year">2025</span>
             <div class="about-history__content">
               <h4 class="about-history__event">Second Alumni Career Workshop</h4>
               <p class="about-history__detail">Hosted a second alumni career workshop, expanding the program with one-on-one mentorship sessions, mock interviews, and recruiting strategy discussions with professionals across multiple industries.</p>
+            </div>
+          </div>
+          <div class="about-history__item">
+            <span class="about-history__year">2026</span>
+            <div class="about-history__content">
+              <h4 class="about-history__event">New Leadership, Advanced Curriculum</h4>
+              <p class="about-history__detail">Under new leadership for 2026–27, MAST began a more advanced, rigorous, and application-driven curriculum. Building on its founding philosophy, this new chapter translates MAST's Core Values into case-based learning, collaborative projects, and industry collaboration.</p>
             </div>
           </div>
         </div>
@@ -212,7 +219,7 @@
       <div class="footer__right">
         <span>&copy; <span id="year"></span> MAST - Indiana University</span>
         <span class="footer__dot" aria-hidden="true">|</span>
-        <span class="footer__handle">@mast_at_iu</span>
+        <a class="footer__handle" href="https://www.instagram.com/mast_at_iu/" target="_blank" rel="noopener noreferrer">@mast_at_iu</a>
       </div>
     </div>
   </footer>

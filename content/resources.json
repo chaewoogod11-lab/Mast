@@ -1,0 +1,204 @@
+{
+  "industryCollaborations": [
+    {
+      "id": "pknic",
+      "publication": "pending",
+      "publicStatus": "Permission required",
+      "partner": "PKNIC",
+      "term": "November 2024",
+      "title": "PKNIC Community Strategy Engagement",
+      "sources": [
+        "RESOURCE_HANDOFF.md B: partner approval for final wording is not recorded"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "strategy-curriculum",
+      "publication": "public",
+      "publicStatus": "Public-safe",
+      "featured": true,
+      "eyebrow": "MAST Curriculum",
+      "title": "Better Questions. Stronger Thinkers.",
+      "lead": "Strategy begins with asking the right question, not rushing to an answer.",
+      "summary": "At MAST, we learn to define problems clearly, challenge assumptions, and turn evidence into reasoned choices. Frameworks organize our thinking, but never replace judgment. Through case discussions, collaborative analysis, and practical projects, we practice explaining what we recommend, why it makes sense, and what evidence would change our minds.",
+      "narrative": {
+        "heading": "Built by Members. Strengthened by Every Cohort.",
+        "paragraphs": [
+          "Our curriculum is a shared body of work that grows with our members. Each cohort adds new cases, sharper questions, and stronger learning materials for those who follow. As members grow, they take greater responsibility for guiding discussions, supporting peers, and shaping the curriculum.",
+          "This is how we aim to grow MAST: by deepening what we can learn, build, and pass on together."
+        ]
+      },
+      "principles": [
+        "Define the problem.",
+        "Challenge assumptions.",
+        "Follow the evidence.",
+        "Make a choice.",
+        "Share the reasoning."
+      ],
+      "sources": [
+        "Member-provided curriculum statement, September 22, 2026"
+      ]
+    },
+    {
+      "id": "career-webinar-series",
+      "publication": "public",
+      "publicStatus": "Summary only",
+      "title": "MAST Career Webinar Series",
+      "summary": "MAST organized career-focused conversations connecting members with professionals and alumni. Its webinar materials show a repeatable process for gathering student questions, preparing speakers, coordinating sessions, and preserving discussion summaries. The series creates a structured setting to explore career decisions, consulting work, and professional development through practical questions and discussion.",
+      "purpose": "Connect student questions with practical career experience.",
+      "built": "Speaker preparation, question collection, and career discussions.",
+      "deliverable": "A preparation guide, speaker Q&A, and thematic session summaries.",
+      "documentedSession": "September 19, 2026",
+      "sources": [
+        "RESOURCE_HANDOFF.md C2",
+        "MAST Webinar Preparation Guide.docx workflow; Arron Yoo answer record (undated); Kyungdo Kwak session summary p1"
+      ]
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "gong-cha-singapore",
+      "publication": "public",
+      "publicStatus": "Summary only",
+      "industry": "Specialty beverages / QSR",
+      "company": "Gong Cha Singapore",
+      "title": "Gong Cha Singapore: Rebuilding Domestic Competitiveness Before Regional Expansion",
+      "summary": "This team presentation evaluates how Gong Cha Singapore could rebuild domestic competitiveness before pursuing broader Southeast Asian expansion. It recommends a premium, lower-sugar children's line, stronger pay, staffing, and training policies, and a more personalized app with a simplified menu. The proposal uses an Ansoff Matrix, business model mapping, implementation sequencing, KPIs, benchmarking, and risk mitigation.",
+      "strategicQuestion": "How should Gong Cha Singapore strengthen domestic competitiveness while building a foundation for longer-term Southeast Asian expansion?",
+      "frameworks": [
+        "Ansoff Matrix and business model mapping",
+        "Benchmarking, implementation sequencing, and risk mitigation"
+      ],
+      "insights": [
+        "The proposal prioritizes home-market competitiveness before regional expansion.",
+        "Product differentiation, workforce practices, and personalized digital experience form a connected set of initiatives.",
+        "Testing, pilots, rollout, and risk controls are proposed steps, not measured results."
+      ],
+      "sources": [
+        "RESOURCE_HANDOFF.md D1",
+        "Gong Cha Real Final PPT_Team 1.pdf pp3,5–9,11–15; 16-page completed proposal; term unverified"
+      ]
+    },
+    {
+      "id": "amazon-fulfillment",
+      "publication": "public",
+      "publicStatus": "Summary only",
+      "industry": "E-commerce / logistics",
+      "company": "Amazon",
+      "title": "Amazon: Lowering Fulfillment Costs Without Weakening Service",
+      "summary": "The deck frames Amazon's retail-margin problem as a logistics-cost problem and concentrates on middle-mile trucking and failed-delivery replacement. It proposes autonomous trucking in Texas and a self-pickup credit, with implementation schedules, sensitivities, and risk mitigations. The analysis is decision-oriented, but several scale, adoption, liability, and cost assumptions require independent validation.",
+      "strategicQuestion": "How can Amazon reduce shipping cost per package without compromising Prime service levels?",
+      "frameworks": [
+        "Logistics cost decomposition",
+        "Unit economics, sensitivity analysis, and rollout planning"
+      ],
+      "insights": [
+        "Breaking a broad margin problem into specific cost pools makes the proposed operational choices more actionable.",
+        "Self-pickup savings depend on customer adoption and processing assumptions; modeled outputs are scenarios.",
+        "Autonomous-trucking proposals require safety, regulation, integration, and liability checks before real-world adoption."
+      ],
+      "sources": [
+        "RESOURCE_HANDOFF.md D1",
+        "Amazon.pdf pp3–10,12–15; term unverified; deck dates describe scenarios"
+      ]
+    },
+    {
+      "id": "amc-cinema",
+      "publication": "public",
+      "publicStatus": "Summary only",
+      "industry": "Cinema / entertainment",
+      "company": "AMC Entertainment",
+      "title": "AMC: Rebuilding the Out-of-Home Cinema Proposition",
+      "summary": "The deck treats AMC's losses as a structural attendance and content-utilization problem rather than a simple pricing issue. It combines a time-sensitive loyalty program, premium-format rereleases, and direct concert-film distribution, then adds implementation steps and financial scenarios. The analysis connects customer propositions with AMC's assets, while causal estimates and external benchmarks require verification.",
+      "strategicQuestion": "How can AMC recover profitability and make theaters more compelling amid streaming competition and weak content utilization?",
+      "frameworks": [
+        "Loyalty and distribution economics",
+        "Premium-format selection, financial scenarios, and risk"
+      ],
+      "insights": [
+        "The proposed portfolio links loyalty to visit frequency, premium rereleases to value per visit, and direct distribution to retained margin.",
+        "Content selection combines premium-format compatibility, a timely cultural hook, and fandom spending potential.",
+        "Projected loyalty and concert-film effects remain hypotheses dependent on benchmarks and selected examples."
+      ],
+      "sources": [
+        "RESOURCE_HANDOFF.md D1",
+        "AMC.pdf pp3–9,11–15; MAST attribution on cover; term unverified"
+      ]
+    },
+    {
+      "id": "alivecor-neurobit",
+      "publication": "public",
+      "publicStatus": "Summary only",
+      "industry": "AI healthcare / medical data",
+      "company": "AliveCor and Neurobit",
+      "title": "AliveCor and Neurobit: Designing a Compliant Data-Acquisition Strategy",
+      "summary": "This team solution examines how AliveCor and Neurobit could secure compliant data for healthcare AI. It compares purchased datasets, institutional partnerships, and proprietary collection, then recommends a hybrid approach centered on hospital relationships and a parallel compliance track. The analysis connects partner value exchange with privacy, integration, cost, and timing constraints rather than treating data volume as the only objective.",
+      "strategicQuestion": "How can healthcare-AI startups acquire sufficiently differentiated, representative and compliant data while balancing cost and time?",
+      "frameworks": [
+        "Data-acquisition option comparison",
+        "Partnership value exchange and compliance constraints"
+      ],
+      "insights": [
+        "The proposal treats institutional data access as a mutual value exchange, beyond purchasing nonexclusive datasets.",
+        "Privacy, consent, anonymization, and integration constraints belong alongside acquisition planning.",
+        "An owned collection channel can strengthen a data loop, but cross-industry analogies do not prove healthcare feasibility."
+      ],
+      "sources": [
+        "RESOURCE_HANDOFF.md D3",
+        "A&N Q4 Solution (1).pptx s1–4,8,10; 11 slides reviewed; term unverified"
+      ]
+    },
+    {
+      "id": "tim-hortons-china",
+      "publication": "pending",
+      "publicStatus": "Do not publish",
+      "company": "Tim Hortons",
+      "title": "Tim Hortons China: Late-Entrant Positioning and Expansion",
+      "sources": [
+        "RESOURCE_HANDOFF.md D1: external Ivey teaching case; MAST use, term and completed analysis unverified"
+      ]
+    }
+  ],
+  "speakerSessions": [
+    {
+      "id": "google-engineering",
+      "publication": "public",
+      "title": "Life at Google: Engineering, Innovation, and Growth",
+      "date": "March 2025",
+      "speaker": "Choi Hyunjung",
+      "affiliation": "Director, Gemini/Bard Engineering · Google",
+      "summary": "A conversation about the technology industry, working at Google, and preparing for the future as an undergraduate.",
+      "sources": [
+        "Existing resources.html",
+        "assets/Choi Hyunjung.png"
+      ]
+    },
+    {
+      "id": "kelley-to-deloitte",
+      "publication": "public",
+      "title": "From Kelley to Deloitte: Building a Consulting Career",
+      "date": "November 2024",
+      "speaker": "Young Jae Lee",
+      "affiliation": "Senior Consultant, Engagement Financial Advisor · Deloitte",
+      "summary": "A career session connecting the Kelley experience with consulting at Deloitte.",
+      "sources": [
+        "Existing resources.html",
+        "assets/Young Jae Lee.png"
+      ]
+    },
+    {
+      "id": "global-banking",
+      "publication": "public",
+      "title": "Building a Career in Global Banking",
+      "date": "September 2024",
+      "speaker": "Ted Seo",
+      "affiliation": "Vice President, Global Payment Systems · Bank of America",
+      "summary": "A speaker session exploring a career in global banking.",
+      "sources": [
+        "Existing resources.html",
+        "assets/Ted, Seo.png"
+      ]
+    }
+  ]
+}

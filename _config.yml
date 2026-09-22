@@ -1,0 +1,34 @@
+# GitHub Pages branch publishing: exclude working copies and source-only files from the site.
+# Custom upload workflows should publish only npm run build's dist/ directory.
+exclude:
+  - MAST
+  - node_modules
+  - scripts
+  - content
+  - tests
+  - reports
+  - dist
+  - test-results
+  - playwright-report
+  - package.json
+  - package-lock.json
+  - playwright.config.mjs
+  - README.md
+  - resources.js
+  - team.js
+  - assets/Pknic.jpg
+  - assets/Gong cha.jpg
+  - assets/Tim.jpg
+  - assets/Choi Hyunjung.png
+  - assets/Young Jae Lee.png
+  - assets/Ted, Seo.png
+  - assets/mast-thinking-process-study-session-1-p23.png
+  - assets/strategy-test-and-learn-loop-study-session-1-p18-redacted.png
+  - assets/Benny.JPG
+  - assets/alumni-logo-placeholder.svg
+  - assets/bandicam 2026-03-09 16-39-39-980.jpg
+  - assets/Group.JPG
+  - assets/grouppic.JPG
+  - assets/mast_group.JPG
+  - assets/MAST_BG_x.png
+  - assets/MAST_slogan_BG_x.png

@@ -150,6 +150,68 @@
   box-shadow: 0 14px 36px rgba(18,18,24,.10);
 }
 
+/* Projects keep a readable content width within the existing card system. */
+.res-grid.projects-grid { grid-template-columns: 1fr; }
+.projects-grid .project-card:hover { transform: none; }
+.projects-grid .res-card__body { padding: 32px; }
+.projects-grid .res-card__title { font-size: clamp(23px, 2.7vw, 32px); max-width: 850px; }
+.projects-grid .res-card__desc { max-width: 850px; flex: initial; margin-bottom: 0; font-size: 15px; }
+.projects-grid .resource-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 36px; padding-top: 22px; border-top: 1px solid #e3d9ce; }
+.projects-grid .resource-visual { background: #fff; }
+.resource-details { border-top: 1px solid #dfd6ca; background: #fbf7f3; }
+.resource-details summary { padding: 20px 32px; color: #500808; font-weight: 600; font-size: 14px; cursor: pointer; }
+.resource-details summary:hover { background: #f0e9e0; }
+.resource-details summary:focus-visible { outline: 2px solid #500808; outline-offset: -5px; }
+
+/* A member-built curriculum, expressed through typography instead of slides. */
+.curriculum-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  border-top: 2px solid #500808;
+}
+.curriculum-card__intro, .curriculum-card__community { padding: 40px; }
+.curriculum-card__intro h3 {
+  font: 600 clamp(30px, 3.4vw, 42px)/1.15 var(--serif);
+  letter-spacing: -.025em;
+  max-width: 18ch;
+  margin: 0 0 24px;
+  color: #380505;
+}
+.curriculum-card__lead { font: 500 20px/1.55 var(--serif); color: #500808; margin: 0 0 20px; }
+.curriculum-card__copy { font-size: 15px; line-height: 1.85; color: #554e47; margin: 0; }
+.curriculum-card__copy + .curriculum-card__copy { margin-top: 20px; }
+.curriculum-card__community { background: #fbf7f3; border-left: 1px solid #e3d9ce; }
+.curriculum-card__community h4 { font: 600 clamp(24px, 2.5vw, 30px)/1.3 var(--serif); color: #380505; margin: 0 0 24px; max-width: 25ch; }
+.curriculum-card__principles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-column: 1 / -1;
+  list-style: none;
+  margin: 0;
+  padding: 26px 40px;
+  gap: 20px;
+  background: #380505;
+  color: #fbf7f3;
+  counter-reset: principles;
+}
+.curriculum-card__principles li { counter-increment: principles; font-size: 13px; font-weight: 600; line-height: 1.6; }
+.curriculum-card__principles li::before { content: counter(principles, decimal-leading-zero); display: block; color: #d3ae76; font-size: 11px; letter-spacing: .12em; margin-bottom: 6px; }
+@media (max-width: 900px) {
+  .curriculum-card { grid-template-columns: 1fr; }
+  .curriculum-card__intro, .curriculum-card__community { padding: 30px; }
+  .curriculum-card__intro h3 { max-width: 24ch; }
+  .curriculum-card__community { border-left: 0; border-top: 1px solid #e3d9ce; }
+  .curriculum-card__community h4 { max-width: 32ch; }
+  .curriculum-card__principles { padding: 24px 30px; }
+}
+@media (max-width: 540px) {
+  .curriculum-card__intro, .curriculum-card__community { padding: 26px 24px; }
+  .curriculum-card__lead { font-size: 19px; }
+  .curriculum-card__principles { grid-template-columns: 1fr; padding: 24px; gap: 14px; }
+  .curriculum-card__principles li { display: flex; align-items: baseline; gap: 14px; font-size: 14px; }
+  .curriculum-card__principles li::before { margin-bottom: 0; }
+}
+
 .res-card__thumb {
   position: relative;
   aspect-ratio: 16/9;
@@ -247,18 +309,7 @@
   object-fit: cover;
   display: block;
 }
-.res-row__play {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: rgba(255,255,255,.80);
-  background: rgba(80,8,8,.38);
-  transition: background .2s;
-}
-.res-row:hover .res-row__play { background: rgba(80,8,8,.56); }
+
 
 .res-row__body {
   display: flex;
@@ -299,17 +350,7 @@
   color: rgba(18,18,24,.58);
   margin: 0;
 }
-.res-row__link {
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .10em;
-  text-transform: uppercase;
-  color: #500808;
-  text-decoration: none;
-  margin-top: 4px;
-  transition: letter-spacing .2s;
-}
-.res-row__link:hover { letter-spacing: .16em; }
+
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -418,4 +459,96 @@
     font-size: 13.5px;
     line-height: 1.68;
   }
+}
+
+/* Public project overview and consistent, uncropped event posters. */
+.res-card__thumb--partnership { display: grid; place-items: center; background: #380808; color: #f5eee3; }
+.res-card__wordmark { padding-top: 22px; font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); }
+.res-card__wordmark > span { color: #c09a5a; padding-inline: 10px; }
+.res-card__status { margin: 0; color: #675a50; font-size: 12px; letter-spacing: .06em; }
+.res-row { align-items: center; }
+.res-row__thumb { aspect-ratio: 1; background: #fff; }
+.res-row__img { object-fit: contain; }
+.res-row__speaker { margin: 4px 0 0; font-size: 16px; font-weight: 700; color: #500808; }
+.res-row__affiliation { margin: 0; font-size: 13px; line-height: 1.6; color: #665950; }
+.res-row__body { min-width: 0; }
+.res-row__meta { flex-wrap: wrap; }
+@media (max-width: 640px) {
+  .res-row__thumb { width: min(100%, 320px); }
+}
+
+/* Resource categories keep a clear three-part hierarchy. */
+.res-banner { min-height: 0; }
+.res-banner__inner { padding: 42px 0; }
+.res-banner__title { font-size: clamp(34px, 4.5vw, 54px); }
+.res-banner__sub { max-width: 700px; line-height: 1.6; letter-spacing: .02em; color: #dac6bc; }
+nav.res-subnav > .container { display: grid; grid-template-columns: 1.4fr .8fr 1fr; }
+nav.res-subnav a { white-space: normal; text-align: center; display: flex; align-items: center; justify-content: center; }
+.res-section { padding: 64px 0; }
+.res-section__header { margin-bottom: 32px; }
+.res-section__desc { max-width: 690px; color: #625b54; }
+.collaborations-grid { display: grid; gap: 28px; }
+.collaboration-card { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr); }
+.collaboration-card .res-card__body { border-top: 0; border-left: 2px solid #500808; padding: 32px; }
+.collaboration-card .res-card__title { font-size: clamp(23px, 2.5vw, 30px); }
+.collaboration-card .res-card__desc { flex: 0; }
+.collaboration-mark { background: linear-gradient(140deg, #500808, #260505); color: #f4e9dc; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px; padding: 32px 20px; min-height: 250px; }
+.collaboration-mark > span { font-size: 10px; letter-spacing: .18em; color: #cba779; }
+.collaboration-mark > strong { font: 500 clamp(28px, 3vw, 42px) var(--serif); }
+.resource-meta { font-size: 11px; font-weight: 600; letter-spacing: .08em; color: #746254; line-height: 1.7; margin: 0 0 12px; }
+.resource-facts { margin: 20px 0 0; display: grid; gap: 18px; }
+.resource-facts dt { color: #756657; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; font-weight: 700; }
+.resource-facts dd { margin: 0; color: #4f4b45; font-size: 14px; line-height: 1.75; }
+.resource-empty { margin: 0; padding: 22px 26px; border-left: 2px solid #c09a5a; background: rgba(255,255,255,.5); color: #675c52; font-size: 14px; line-height: 1.8; max-width: 760px; }
+.resource-visual { margin: 0; background: #f0ece5; }
+.resource-visual img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+.resource-visual figcaption { padding: 18px 32px; font-size: 14px; line-height: 1.7; color: #655b51; background: #f7f3ed; }
+.resource-visual figcaption span { display: block; max-width: 800px; }
+.resource-visual figcaption a { display: inline-block; margin-top: 10px; color: #500808; text-decoration: underline; text-underline-offset: 3px; }
+.res-card--text { grid-template-columns: 1fr; }
+.res-card--text .res-card__body { border-left: 0; border-top: 2px solid #500808; }
+.res-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.res-card__link { display: inline-block; margin-top: 24px; line-height: 1.6; }
+.case-studies { display: grid; gap: 32px; }
+.case-study { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); border: 1px solid #dfd6ca; border-top: 2px solid #500808; }
+.case-study__overview { padding: 30px; background: #fbf7f3; }
+.case-study__overview h3 { font: 600 clamp(24px, 3vw, 32px) var(--serif); margin: 0 0 14px; }
+.case-study__summary { margin: 24px 0 0; color: #554e47; font-size: 14px; line-height: 1.8; }
+.case-study__overview .resource-visual { margin-top: 24px; }
+.case-study__learning { padding: 36px; }
+.resource-label { color: #866233; font-size: 10px; font-weight: 700; letter-spacing: .14em; margin: 0 0 14px; }
+.case-study__question { font: 500 clamp(23px, 2.6vw, 31px)/1.4 var(--serif); color: #500808; margin: 0 0 26px; }
+.resource-list { margin-top: 24px; }
+.resource-list h4 { margin: 0 0 10px; color: #756657; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
+.resource-list ul { margin: 0; padding-left: 18px; color: #554e47; font-size: 14px; line-height: 1.8; }
+.resource-list li + li { margin-top: 10px; }
+.case-study--text .case-study__overview { display: flex; flex-direction: column; justify-content: flex-start; }
+.speaker-archive { background: #ede8df; padding: 48px 0; border-top: 1px solid #d9cec0; }
+.speaker-archive__header { display: flex; align-items: baseline; justify-content: space-between; gap: 32px; margin-bottom: 26px; }
+.speaker-archive__header h2 { font: 600 28px var(--serif); margin: 0; }
+.speaker-archive__header p { max-width: 500px; color: #6a6056; font-size: 13px; line-height: 1.7; margin: 0; }
+.speaker-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.speaker-card { border-top: 1px solid #b99e7e; padding-top: 20px; }
+.speaker-card h3 { font: 600 18px/1.5 var(--serif); margin: 0 0 16px; }
+.speaker-card__name { color: #500808; font-weight: 700; font-size: 13px; margin: 0 0 6px; }
+.speaker-card__affiliation, .speaker-card__summary { font-size: 12px; line-height: 1.75; color: #645a50; margin: 0 0 12px; }
+@media (max-width: 720px) {
+  .res-banner__inner { padding: 30px 0; }
+  .res-section { padding: 42px 0; }
+  .res-section__header { margin-bottom: 24px; }
+  .collaboration-card, .case-study { grid-template-columns: 1fr; }
+  .collaboration-card .res-card__body { border-left: 0; border-top: 2px solid #500808; padding: 24px; }
+  .collaboration-mark { min-height: 190px; }
+  .case-study__overview, .case-study__learning { padding: 24px; }
+  .projects-grid .res-card__body { padding: 24px; }
+  .projects-grid .resource-facts { grid-template-columns: 1fr; }
+  .resource-visual figcaption, .resource-details summary { padding: 18px 24px; }
+  .speaker-archive__header { display: block; }
+  .speaker-archive__header h2 { margin-bottom: 12px; }
+  .speaker-grid { grid-template-columns: 1fr; gap: 18px; }
+  .speaker-card h3 { font-size: 19px; }
+  .speaker-card__affiliation, .speaker-card__summary { font-size: 13px; }
+}
+@media (max-width: 380px) {
+  .collaboration-card .res-card__body, .case-study__overview, .case-study__learning { padding: 20px; }
 }

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -22,7 +22,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation">
           <span class="nav__toggle-bar"></span>
           <span class="nav__toggle-bar"></span>
           <span class="nav__toggle-bar"></span>
@@ -68,18 +68,15 @@
       <div class="container">
         <div class="about-split">
           <div class="about-split__media">
-            <img src="assets/Mast Group Pic.jpg" alt="MAST team group photo" class="about-split__img">
+            <img src="assets/Mast Group Pic.jpg" alt="MAST community group photo" class="about-split__img">
           </div>
 
           <div class="about-split__content">
             <p class="about-split__eyebrow">WHO WE ARE</p>
             <h2 class="about-split__title">About MAST</h2>
 
-            <p class="about-split__text">
-              MAST is an academic community where forward-thinking students gather to challenge perspectives
-              and broaden their intellectual horizons. We believe that by sharing diverse insights, we can
-              cultivate the multifaceted vision required for tomorrow's strategic challenges.
-            </p>
+            <p class="about-split__text">MAST is a student-led academic community at Indiana University where members learn strategic thinking and apply it to real problems. Through case-based study sessions, applied team projects, and industry collaborations, we connect perspectives across disciplines. Our community and professional network bring students, alumni, and practitioners into that learning process.</p>
+            <p class="about-split__note">In 2026&ndash;27, new leadership introduced a more advanced, application-driven curriculum grounded in MAST's founding values.</p>
 
             <a class="about-link" href="about.html">About Us</a>
           </div>
@@ -126,11 +123,11 @@
           <div class="contact-pro__items">
             <div class="contact-pro__item">
               <span class="contact-pro__item-label">Email</span>
-              <span class="contact-pro__item-value">mast@indiana.edu</span>
+              <a class="contact-pro__item-value" href="mailto:chacha@iu.edu">chacha@iu.edu</a>
             </div>
             <div class="contact-pro__item">
               <span class="contact-pro__item-label">Instagram</span>
-              <span class="contact-pro__item-value">@mast_at_iu</span>
+              <a class="contact-pro__item-value" href="https://www.instagram.com/mast_at_iu/" target="_blank" rel="noopener noreferrer">@mast_at_iu</a>
             </div>
             <div class="contact-pro__item">
               <span class="contact-pro__item-label">Location</span>
@@ -141,16 +138,16 @@
         <div class="contact-pro__right">
           <form action="https://formspree.io/f/mwvngzkj" method="POST" class="contact-form">
             <div class="contact-form__field">
-              <label class="contact-form__label">Email</label>
-              <input type="email" name="email" placeholder="your@email.com" required>
+              <label class="contact-form__label" for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
             </div>
             <div class="contact-form__field">
-              <label class="contact-form__label">Subject</label>
-              <input type="text" name="subject" placeholder="e.g. Partnership Inquiry" required>
+              <label class="contact-form__label" for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="e.g. Partnership Inquiry" required>
             </div>
             <div class="contact-form__field">
-              <label class="contact-form__label">Message</label>
-              <textarea name="message" placeholder="Tell us more..." rows="5" required></textarea>
+              <label class="contact-form__label" for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Tell us more..." rows="5" required></textarea>
             </div>
             <button type="submit">Send Message</button>
           </form>
@@ -167,7 +164,7 @@
         <div class="footer__right">
           <span>&copy; <span id="year"></span> MAST - Indiana University</span>
           <span class="footer__dot" aria-hidden="true">|</span>
-          <span class="footer__handle">@mast_at_iu</span>
+          <a class="footer__handle" href="https://www.instagram.com/mast_at_iu/" target="_blank" rel="noopener noreferrer">@mast_at_iu</a>
         </div>
       </div>
     </footer>
@@ -176,5 +173,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
 
